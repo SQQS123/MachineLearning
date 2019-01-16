@@ -12,7 +12,7 @@ data = pd.read_csv(
     'http://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data',
     names=colun_names)
 
-# 使用标准缺失值来替换掉问号,所以说，，为啥会有问号
+# 使用标准缺失值来替换掉问号
 data = data.replace(to_replace='?', value=np.nan)
 
 data = data.dropna(how='any')
